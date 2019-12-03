@@ -1,5 +1,4 @@
-Paper list
-==========
+# Paper list
 
 1.  Deep learning with limited numerical precision. **2015 IBM**
 2.  **DoReFa-Net**: Training low bit-width convolutional neural networks with low bit-width gradients. **2016**

@@ -11,7 +11,10 @@ Welcome to QuanOview's documentation!
    :caption: Contents:
    :glob:
 
-   _index/*
+   _index/introduction.rst
+   _index/paper_list.md
+   _index/paper_detail.rst
+   _index/QuanImp.rst
 
 
 
