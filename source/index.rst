@@ -9,6 +9,9 @@ Welcome to QuanOview's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   :glob:
+
+   _index/*
 
 
 
