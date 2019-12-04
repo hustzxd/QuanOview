@@ -63,8 +63,7 @@
     **NIPS2018** intel
 36. **SYQ**: learning symmetric quantization for efficient deep neural
     networks. **CVPR2018** xilinx
-37. **TSQ**: two-step quantization for low-bit neural networks.
-    **CVPR2018**
+37. **TSQ**: two-step quantization for low-bit neural networks. **CVPR2018**
 38. **V-Quant**: Value-aware quantization for training and inference of
     neural networks. **ECCV2018** facebook
 39. **UNIQ**: Uniform noise injection for non-uniform quantization of
@@ -88,3 +87,11 @@
 49. **Post training** 4-bit quantization of convolution networks for
     rapid-deployment. **2019**
 50. **FQN**: Fully Quantized Network for Object Detection. **CVPR2019**
+51. **LSQ**: Learned Step Size Quantization **ICLR2020**
+52. Mixed Precision DNNs: All you need is a good parametrization **ICLR2020 open review**
+53. **QIL**: Learning to Quantize Deep Networks by Optimizing Quantization Intervals with Task Loss
+54. **HAWQv2**: Hessian Aware trace-Weighted Quantization of Neural Networks
+
+## Not importan
+
+

@@ -1,0 +1,35 @@
+%abstract.tex
+\ifx\allfiles\undefined
+\input{package_list}
+
+\begin{document}
+\fi
+
+\begin{table*}[tp]
+\begin{center}
+\caption{Comparison of different quantization methods. $\hat{w}\approx \hat{w}_q$}
+\label{tb:bs}
+\begin{tabular}{c|c|c|c|c|c}
+\hlineB{2.5}
+\textbf{\textit{Method}} & $w$ & $\hat{w}$ & $\hat{w}_q$ & Parameter of quantizer & layer-wise \\ \hline
+\textit{DoReFa} & $w \in \mathbb{R}$ & $\hat{w} = \frac{\tanh(w)}{\max(|\tanh(w)|)} \in [-1, 1]$ & $\hat{w}_q = \lfloor \frac{(\hat{w} + \beta)}{\alpha} \rceil \alpha - \beta $& $\alpha = \frac{2}{2^k-1};\beta=1$& \\ 
+& & &$q_{\hat{w}} \in  [0,\cdots, 2^k - 1]$ & & \\ \hline
+\textit{WRPN} & $w\in \mathbb{R}$ & $\hat{w} = w$& $\hat{w}_q = \lfloor \mbox{clip}(\frac{\hat{w}}{\alpha}, -2^{k-1}-1, 2^{k-1}-1) \rceil \alpha  $& $\alpha = \frac{1}{2^{k-1}-1}$& \\ 
+& & $\hat{w}\in \mathbb{R}$ & $q_{\hat{w}} \in [-(2^{k-1}-1), \dots, 0,\dots, 2^{k-1} - 1]$ & & \\ \hline
+\textit{QIL} & $w \in \mathbb{R}$ &
+$\hat{w} = \begin{cases} 
+0,&\mbox{if } |w| < c-d \\ 
+\mbox{sign}(w) ,&\mbox{if } |w| > c+d \\ 
+(\frac{d}{2} |w| + \frac{d-c}{2d})^\gamma \cdot \mbox{sign}(w), &\mbox{otherwise} \end{cases} $  & $\hat{w}_q = \lfloor \frac{\hat{w}}{\alpha} \rceil \alpha  $ & $\alpha = \frac{1}{2^{k-1} - 1};\ \gamma; c; d; $ & \\
+& & $\hat{w}\in [-1, 1]$ & $q_{\hat{w}} \in [-(2^{k-1}-1), \dots, 0,\dots, 2^{k-1} - 1]$ & & \\ \hline
+\textit{LSQ}& $w\in \mathbb{R}$ & $\hat{w} = w$& $\hat{w}_q = \lfloor \mbox{clip}(\frac{\hat{w}}{\alpha}, -2^{k-1}, 2^{k-1}-1) \rceil \alpha$ & $\alpha$& \\
+           &  & $\hat{w} \in \mathbb{R}$& $q_{\hat{w}}\in [-2^{k-1}, \dots, 0, \dots, 2^{k-1}-1]$ & & \\
+\hlineB{2.5}
+\end{tabular}
+\end{center}
+\vspace*{-0.7cm}
+\end{table*}
+
+\ifx\allfiles\undefined
+\end{document}
+\fi
