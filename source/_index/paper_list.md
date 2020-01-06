@@ -22,15 +22,17 @@
 12. **WRPN**: wide reduced-precision networks. **2017** Accelerator Architecture Lab, Intel
 14. **HWGQ**: Deep Learning with Low Precision by Half-wave Gaussian Quantization. **CVPR2017**
 13. A **Survey** of Model Compression and Acceleration for Deep Neural Networks. **2017**
+14. **LP-SGD** Understanding and Optimizing Asynchronous Low-Precision Stochastic Gradient Descent **ISCA2017**
+15. How to Train a Compact Binary Neural Network with High Accuracy? **NLPR MicroSoft**
 
 
 ### 2018
 
 #### ICLR2018
 15. **VNQ**: Variational network quantization. **ICLR2018**
-16. **WAGE**: Training and Inference with Integers in Deep Neural Networks. **ICLR2018** oral tsinghua
+16. **WAGE**: Training and Inference with Integers in Deep Neural Networks. **ICLR2018** oral tsinghua 不仅量化了weight,activation还量化了error, gradient.
 21. Alternating multi-bit quantization for recurrent neural networks. **ICLR2018** alibaba
-28. Mixed Precision Training. **ICLR2018** baidu
+28. Mixed Precision Training. FP16 training **ICLR2018** baidu
 30. Model Compression via distillation and quantization. **ICLR2018** google
 33. Quantized back-propagation: training binarized neural networks with quantized gradients. **ICLR2018**
 
@@ -88,11 +90,15 @@
 ==== Other
 46. **SAWB**: Accurate and efficient 2-bit quantized neural networks. **sysml2019**
 47. **SQuantizer**: Simultaneous Learning for Both Sparse and Low-precision Neural Networks. **2019** AIPG, Intel
+48. Distributed Low Precision Training Without Mixed Precision. **Oxford snowcloud.ai**
+49. __Adaptive__ Precision Training: Quantify Back Propagation in Neural Networks with Fixed-point Numbers. **ICT Cambricon** int8 for weights and activations, int16 for most of the gradients.
+50. **WAGEUBN**: Training High-Performance and Large-Scale Deep Neural Networks with Full 8-bit Integers. 应该算是WAGE的进阶版了
 
 ### 2020
-51. **LSQ**: Learned Step Size Quantization **ICLR2020 open-review**
-52. Mixed Precision DNNs: All you need is a good parametrization **ICLR2020 open-review**
+51. **LSQ**: Learned Step Size Quantization **ICLR2020**
+52. Mixed Precision DNNs: All you need is a good parametrization **ICLR2020 sony**
 54. **HAWQv2**: Hessian Aware trace-Weighted Quantization of Neural Networks
+55. **LLSQ**: Learned Symmetric Quantization of Neural Networks for Low-precision Integer Hardware. **ICLR2020** **ICT**
 
 ## Nonclear for Me
 5.  Fixed point quantization of deep convolutional networks. **2016**
